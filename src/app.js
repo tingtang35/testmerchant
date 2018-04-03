@@ -76,14 +76,7 @@ app.post("/api/merchant", function (req, res) {
 });
 
 app.get("/api/merchant/:id", function (req, res) {
-    if (err) {
-        return res.status(400).send({
-            message: err
-        });
-    } else {
         res.json(req.data)
-    };
-    ;
 });
 
 app.param("id", function (req, res, next, id) {
